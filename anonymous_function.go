@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Blacklist func(string2 string) bool
+type Blacklist func(string) bool
 
 func registerUser(name string, blacklist Blacklist) {
 	if blacklist(name) {
