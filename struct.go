@@ -7,6 +7,10 @@ type Anime struct {
 	Rating      int
 }
 
+func (anime Anime) sayReview(review string) {
+	fmt.Println("my review about", anime.Name, "its very", review)
+}
+
 func main() {
 	//	membuat data struct menggunakan var
 
@@ -31,4 +35,10 @@ func main() {
 	naga := Anime{"nagabonar", "fiksi", 8.0}
 
 	fmt.Println(naga)
+
+	naga.sayReview("good")
+	naruto.sayReview("it is mastrepiece")
+
+	//	struct Method
+
 }
