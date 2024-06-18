@@ -22,17 +22,26 @@ func (person Person) getName() string {
 
 //try
 
-func About(value Asking) {
+func Greet(value Asking) {
 	fmt.Println("hi ", value.getName())
 }
 
 type Somebody struct {
-	Name   string
-	addres string
+	Name    string
+	address string
 }
 
 func (somebody Somebody) getName() string {
-	return somebody.Name + " do you live in " + somebody.addres
+	return somebody.Name + " do you live in " + somebody.address
+}
+
+type Character struct {
+	Name string
+	Role string
+}
+
+func (Character Character) getName() string {
+	return Character.Name + " your role is " + Character.Role + "?"
 }
 
 func main() {
@@ -40,5 +49,8 @@ func main() {
 
 	ilham := Somebody{"ilham", "lawang"}
 	SayAsk(ozi)
-	About(ilham)
+	Greet(ilham)
+	ultra := Character{"ultraman", "hyper"}
+	SayAsk(ultra)
+
 }
